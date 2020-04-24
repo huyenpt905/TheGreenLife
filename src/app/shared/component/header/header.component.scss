@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+@import'../../../styles/mixins';
+
+.header {
+    // background: #ccc;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 8px;
+    &__start {
+        width: 40%;
+        @include respond-to(md) {
+            flex: 1
+        }
+        .btn--bars i {
+           color: #fff;
+        }
+
+        .logo {
+            background-color:  #b7e1cd;
+            padding: 4px 10px;
+            vertical-align: middle;
+            color: $c-green;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+    }
+
+    &__center {
+        line-height: 0;
+        display: none;
+        vertical-align: middle;
+        @include respond-to(md) {
+            flex: 3;
+            display: block;
+            margin-top: 8px;
+        }
+
+        @include respond-to(lg) {
+            flex: 2;
+            margin-right: 3rem;
+        }
+
+        .input-search {
+            display: inline-block;
+            width: calc(100% - 80px);
+            height: 30px;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        .label-search {
+            background: #b7e1cd;
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+        
+    }
+
+    &__end {
+        width: 60%;
+        @include respond-to(md) {
+           flex: 2;
+        }
+        @include respond-to(lg) {
+            flex: 1;
+         }
+        .user-login {
+            border: 1px solid $border-btn;
+            border-radius: 3px;
+            padding: 5px 11px;
+            line-height: 0;
+        }
+        .user-login .btn-login {
+            color: $c-green;
+            span {
+                margin-left: 4px;
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+
+            i {
+                font-size: 1.3rem;
+            }
+        }
+        .icon-search {
+            @include respond-to(md) {
+                display: none;
+            }
+        }
+       
+    }
+      
+      
+}

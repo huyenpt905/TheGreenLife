@@ -1,1 +1,31 @@
-<p>header works!</p>
+<header class="header d-flex align-items-center justify-content-between">
+    <div class="header__start">
+        <button class="btn-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="logo" href="">LoGo</a>
+    </div>
+    <div class="header__center">
+        <input class="input-search" id="search" type="text" placeholder="Search">
+        <label class="label-search" for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+    </div>
+    <div class="header__end">
+        <div class="d-flex justify-content-end align-items-center">
+            <button class="btn-icon icon-search" (click)="showSearchInput()">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn-icon">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+            </button>
+            <button class="btn-icon">
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            </button>
+            <div class="user-login">
+                <a class="btn-login" href="">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <span>ĐĂNG NHẬP</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
