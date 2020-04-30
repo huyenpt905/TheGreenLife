@@ -1,0 +1,111 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/generic";
+@import "../../../../styles/mixins";
+
+.header {
+    height: 56px;
+    line-height: 56px;
+    padding: 0 8px;
+    margin-bottom: 1rem;
+
+    @include respond-to(md) {
+        padding: 0 16px;
+    }
+
+    &__start {
+        @include respond-to(md) {
+            flex: 1
+        }
+
+        .btn--bars i {
+           color: #fff;
+        }
+
+        .logo {
+            background-color:  #b7e1cd;
+            padding: 9px 12px;
+            vertical-align: middle;
+            color: $c-green;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+    }
+}
+
+.step-pay {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    .progressbar {
+        margin-bottom: 1rem;
+        width: 100%;
+        counter-reset: step;
+        border-bottom: none;
+        position: relative;
+        z-index: 0;
+        
+        .nav-item {
+        list-style-type: none;
+        width: 33.33%;
+        float: left;
+        font-size: 12px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        color: #7d7d7d;
+        margin-bottom: 0;
+
+        &:before {
+            width: 30px;
+            height: 30px;
+            content: counter(step);
+            counter-increment: step;
+            line-height: 30px;
+            border: 2px solid #7d7d7d;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: white;
+        }
+        &::after {
+            width: 100%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background-color: #7d7d7d;
+            top: 15px;
+            left: -50%;
+            z-index: -1;
+        }
+        &:first-child:after {
+            content: none;
+        }
+        .nav-link {
+            border: none;
+        }
+        }
+        .current {
+        color: $c-green;
+        &:before {
+            border-color: $c-green;
+        }
+        }
+        .current + nav-item::after {
+        background-color: $c-green;
+        }
+    }
+    .tab-step {
+        background-color: #fff;
+        @include box-shadow;
+
+        &__btn {
+        width: 200px;
+        margin: 0 auto;
+        }
+        .custom-file {
+        height: auto;
+        }
+    }
+}

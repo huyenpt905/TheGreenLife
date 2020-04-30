@@ -1,0 +1,116 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/generic";
+@import "../../../../styles/mixins";
+
+
+.table {
+    transition: 0.5s;
+    padding-bottom: 0;
+    width: 100%;
+    @include box-shadow;
+  
+    .img {
+        width: 120px;
+        height: 120px;
+    }
+
+    &__head {
+      display: none;
+      visibility: hidden;
+      border-bottom: 2px solid $c-green;
+
+      @include respond-to(md) {
+        width: 100%;
+        display: table-header-group;
+        visibility: visible;
+      }
+
+       .table__cell--head{
+          background: #e4e4e4;
+          padding: 15px 0;
+        }
+    }
+  
+    &__body,
+    &__row,
+    &__cell {
+      display: block;
+      border: 0;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+      @include respond-to(md) {
+        text-align: center;
+      }
+
+      .table__head {
+        @include respond-to(md) {
+          padding: 20px;
+          text-align: center;
+          font-size: 1.35rem;
+          background: #fff;
+          border: 1px solid #b4b4b4;
+        }
+      }
+
+      .btn-detail {
+        color: $c-green;
+        font-style: italic;
+      }
+    }
+  
+    &__row {
+      margin-bottom: 10px;
+      background-color: #fff;
+      
+      @include respond-to(md) {
+        display: table-row;
+        width: 100%;
+        .table__cell {
+          display: table-cell;
+  
+        }
+      }
+      &:nth-child(even) {
+        background-color: #fff;
+      }
+    }
+  
+    &__cell {
+      padding: 6px;
+      transition: 1s;
+    }
+  
+    &__body {
+      display: table-row-group;
+    }
+  
+    &__cell[data-title]:before {
+      display: inline-block;
+      min-width: 200px;
+      content: attr(data-title) ":";
+      font-weight: bold;
+
+      @include respond-to(md) {
+        display: none;
+        content: "";
+      }
+    }
+  
+    &__cell:empty {
+      display: none;
+
+      @include respond-to(md) {
+        display: table-cell;
+      }
+    }
+  
+    &__cell--head {
+      @include respond-to(md) {
+        &[data-title]:before {
+          display: none;
+          content: "";
+        }
+      }
+    }
+  }

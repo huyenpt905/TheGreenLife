@@ -1,0 +1,116 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/generic";
+@import "../../../../styles/mixins";
+
+.customer {
+    background: $bg-layer;
+    height: 100vh;
+    //margin-top: -2rem;
+    padding: 2rem 0;
+    .table{
+      thead{
+        tr{
+          td{
+            padding:10px 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+    &__left {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      @include box-shadow;
+      img {
+        width: 150px;
+        height: 150px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .left-name {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+      }
+      .left-btns {
+        display: flex;
+        @include respond-to(md) {
+          display: block;
+        }
+        .left-btn {
+          text-align: center;
+          padding: 10px 1rem;
+          width: 100%;
+          margin-bottom: 10px;
+          border: 1px solid #b4b4b4;
+          @include respond-to(lg) {
+            position: relative;
+            text-align: left;
+            border: none;
+            margin-bottom: 0;
+          }
+          button {
+            display: block;
+            outline: none;
+            margin: 0 auto;
+            border: none;
+            background: none;
+            .icon-btn {
+              font-size: 1.25rem;
+            }
+            .icon-arrow-right {
+              display: none;
+              @include respond-to(lg) {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 12px;
+              }
+            }
+            span {
+              display: none;
+              @include respond-to(lg) {
+                display: inline-block;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    &__right {
+      background: #fff;
+      padding: 2rem 1rem;
+      @include box-shadow;
+      @include respond-to(lg) {
+        padding: 2rem;
+      }
+      form {
+        padding: 0 1rem;
+        input[type="submit"] {
+          font-weight: bold;
+          background: #fff;
+          color: $c-green;
+          border: 1px solid $c-green;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background: $c-green;
+            color: #fff;
+          }
+        }
+      }
+      h6 {
+        margin-bottom: 1rem;
+      }
+      .btn-wrap {
+        text-align: right;
+      }
+    }
+  }

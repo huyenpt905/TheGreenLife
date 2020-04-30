@@ -1,0 +1,40 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/generic";
+@import "../../../../styles/mixins";
+
+.product-detail {
+  margin: 3rem 0;
+}
+.product-img {
+  width: inherit;
+  height: inherit;
+}   
+
+
+.content__title{
+  position: relative;
+  padding-bottom: 15px;
+  color: $c-green-bold;
+}
+
+.content__title::after {
+  content: "";
+  position: absolute;
+  background-color: $c-green;
+  width: 100px;
+  height: 3px;
+  bottom: 0;
+  left: 45%;
+}
+
+.btn-buy {
+  background: $c-green;
+  color: #fff;
+}
+
+.see-more {
+  font-style: italic;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  margin-bottom: .8rem;
+}

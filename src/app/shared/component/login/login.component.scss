@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+@import "../../../styles/generic";
+@import "../../../styles/mixins";
+
+.login {
+    min-height: 100vh;
+    &__box {
+      width: 100%;
+      @include respond-to(sm) {
+        width: 50%;
+      }
+      @include respond-to(md) {
+        width: 45%;
+      }
+      @include respond-to(lg) {
+        width: 35%;
+      }
+    }
+  }
+  
+  

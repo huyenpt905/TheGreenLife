@@ -1,0 +1,58 @@
+<app-header></app-header>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
+    </ol>
+</nav>
+<section class="container">
+    <table class="table">
+        <thead class="table__head">
+            <tr class="table__row">
+                <th class="table__cell table__cell--head" scope="col">Ảnh minh họa</th>
+                <th class="table__cell table__cell--head" scope="col">Sản phẩm</th>
+                <th class="table__cell table__cell--head" scope="col">Khuyến mại</th>
+                <th class="table__cell table__cell--head" scope="col">Số lượng</th>
+                <th class="table__cell table__cell--head" scope="col">Tổng tiền</th>
+                <th class="table__cell table__cell--head" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+
+            <tr class="table__row">
+                <th class="table__cell table__cell--head" scope="row" data-title="Hình ảnh">
+                    <img class="img" src="../src/img/sp1.png" alt="">
+                </th>
+                <th class="table__cell table__cell--head" scope="row" data-title="Sản phẩm">
+                    Ngũ gia bì <span class="d-block">70.000 VND</span>
+                </th>
+                <td class="table__cell" data-title="Khuyến mại">
+                    #FREESHIP
+                </td>
+                <td class="table__cell" data-title="Số lượng">
+                    <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+                    <span>2</span>
+                    <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+                </td>
+                <td class="table__cell" data-title="Tổng tiền">
+                    140 000 VND
+                </td>
+                <td class="table__cell">
+                    <a class="" href="">Xóa</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="checkout d-flex justify-content-between">
+        <div class="checkout__left">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span class="text">Tiếp tục mua hàng</span>
+        </div>
+        <div class="checkout__right">
+            <p class="text">Số tiền: <span class="cart__pay">140.000 VND</span></p>
+            <button class="btn btn-primary btn-pay" routerLink="/checkout">Thanh toán</button>
+        </div>
+    </div>
+</section>
