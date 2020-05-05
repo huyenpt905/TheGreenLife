@@ -6,6 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ClientModule } from './modules/client/client.module';
 import { LoginComponent } from './shared/component/login/login.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+import localeVi from '@angular/common/locales/vi';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeVi, 'vi');
 
 @NgModule({
   declarations: [
@@ -16,6 +21,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     ClientModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule
   ],

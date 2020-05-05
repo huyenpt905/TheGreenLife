@@ -25,33 +25,30 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<div class="container">
-
+<div>
+    <ul class="nav nav-tabs justify-content-center sticky-top mt-5">
+        <li 
+        class="nav-item" 
+        *ngFor="let category of categories"
+        >
+            <a 
+            class="nav-link" 
+            (click)="getProductInCategory(category.id)"
+            >{{ category.name }}</a>
+        </li>
+    </ul>
     <section class="product">
         <div class="container">
-            <h2>Cây phong thủy</h2>
+            <!-- <h2>Cây phong thủy</h2> -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" *ngFor="let product of products">
                     <div class="product__item">
-                        <img class="img-fluid" src="../../../../assets/sp1.png" alt="Cây ngũ gia bì">
-                        <h3 class="product__txt">Ngũ gia bì</h3>
-                        <p class="product__txt">Giá: 70.000 VND</p>
+                        <img class="img-fluid" [src]="product.image" alt="Cây ngũ gia bì">
+                        <h3 class="product__txt">{{ product.name }} | </h3>
+                        <p class="product__txt">Giá: {{ product.price | currency}}</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="product__item">
-                        <img class="img-fluid" src="../../../../assets/sp1.png" alt="Cây ngũ gia bì">
-                        <h3 class="product__txt">Ngũ gia bì</h3>
-                        <p class="product__txt">Giá: 70.000 VND</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product__item">
-                        <img class="img-fluid" src="../../../../assets/sp1.png" alt="Cây ngũ gia bì">
-                        <h3 class="product__txt">Ngũ gia bì</h3>
-                        <p class="product__txt">Giá: 70.000 VND</p>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </section>
