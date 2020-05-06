@@ -10,7 +10,7 @@ import { NotFoundPageComponent } from './modules/client/pages/not-found-page/not
 
 const routes: Routes = [
   { path: '',  component: HomePageComponent },
-  { path: 'product', component: ProductDetailPageComponent},
+  { path: 'category/:categoryId/product/:productId', component: ProductDetailPageComponent},
   { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'cart', component: CartorderComponent },

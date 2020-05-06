@@ -42,13 +42,12 @@
             <!-- <h2>Cây phong thủy</h2> -->
             <div class="row">
                 <div class="col-md-4" *ngFor="let product of products">
-                    <div class="product__item">
-                        <img class="img-fluid" [src]="product.image" alt="Cây ngũ gia bì">
+                    <div class="product__item" [routerLink]="'/category/' + product.categoryId +'/product/' + product.id" routerLinkActive="router-link-active" >
+                        <img class="img-fluid" [src]="product.image" [alt]="product.name">
                         <h3 class="product__txt">{{ product.name }} | </h3>
-                        <p class="product__txt">Giá: {{ product.price | currency}}</p>
+                        <p class="product__txt">Giá: {{ product.price | currency }}</p>
                     </div>
                 </div>
-              
             </div>
         </div>
     </section>

@@ -2,8 +2,8 @@
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
+        <li class="breadcrumb-item"><a routerLink="/" >Trang chủ</a></li>
+        <li class="breadcrumb-item active" routerLinkActive="router-link-active" aria-current="page">Chi tiết sản phẩm</li>
     </ol>
 </nav>
 
@@ -12,16 +12,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <img class="product-img" src="../../../../../assets/sp1.png" alt="">
+                <img class="product-img" [src]="product.image" alt="">
             </div>
             <div class="col-md-8">
-                <h3>Ngũ gia bì</h3>
-                <p>Cây Ngũ gia bì tương đối phổ biến và được tìm mua vì nhiều lý do,
-                    hai trong số những lý do thường nghe nhất là Ngũ gia bì rất dễ trồng và nó có khả năng đuổi
-                    muỗi.
-                    Nhưng để mua một cây ngũ gia bì cho mình, bạn cần lưu ý những điều nào.
-                </p>
-                <p>70,000 VND</p>
+                <h3>{{ product.name }}</h3>
+                <p> {{ product.desc }}</p>
+                <p>{{ product.price | currency}}</p>
                 <button type="button" class="btn btn-buy">MUA NGAY</button>
             </div>
         </div>
